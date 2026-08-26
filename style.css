@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+img{
+    height: 360px;
+    width: auto;
+    padding: 10px;
+    filter: drop-shadow(15px 15px 25px red);
+}
+header{
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(IMG/mundialargentina.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Hero-content{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 100%;
+
+}
+h1{
+    font-family: "Roboto", sans-serif;
+    font-size: 55px;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    margin-left: 200px;
+    top: 50%;
+}
+ul{
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color: #f0f0f0;
+}
