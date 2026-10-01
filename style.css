@@ -76,3 +76,32 @@ body{
     box-shadow: 5px 5px 5px red;
     float: left;
 }
+.Articulos p {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: "Roboto", sans-serif;
+}
+
+footer {
+    width: 100%;
+    background-color: #000000; 
+    color: #ffffff;           
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: "Roboto", sans-serif;
+    clear: both;              
+}
