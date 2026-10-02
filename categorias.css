@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.TituloCategorias{
+    font-family: "Roboto", sans-serif;
+    font-size: 55px;
+    color: #ff6600;
+    text-align: center;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500, 0 0 20px #ffcc00;
+    animation: fuego 1s infinite alternate;
+}
+
+@keyframes fuego{
+    from{
+        color: #ff4500;
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500, 0 0 20px #ffcc00;
+    }
+
+    to{
+        color: #ffcc00;
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ffcc00;
+    }
+}
+
+nav{
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    padding: 15px 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.container{
+    width: 80%;
+    height: 350px;
+    display: flex;
+    gap: 10px;
+}
+
+.card{
+    min-width: 200px;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    flex: 1;
+    transition: flex .5s ease-in-out;
+    position: relative;
+}
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 2.5s;
+    transform-style: preserve-3d;
+}
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform: translateZ(12px);
+}
+
+.front h3{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    transform: translateZ(35px);
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 8px #000;
+}
+
+.back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #222;
+    color: white;
+    transform-style: preserve-3d;
+    padding: 30px;
+    text-align: center;
+}
+
+.back h3{
+    font-size: 35px;
+    margin-top: 40px;
+    transform: translateZ(35px);
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 8px #000;
+}
+
+.back p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 30px;
+    transform: translateZ(25px);
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
